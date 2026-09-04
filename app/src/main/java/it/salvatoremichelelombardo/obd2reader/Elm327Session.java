@@ -1,0 +1,3 @@
+package it.salvatoremichelelombardo.obd2reader;
+import java.io.IOException;
+public final class Elm327Session { private final Elm327Transport transport; public Elm327Session(Elm327Transport t){transport=t;} public void connect()throws IOException{transport.connect();for(String c:new String[]{"ATZ","ATE0","ATL0","ATS0","ATH0","ATSP0"})send(c);} public String send(String command)throws IOException{if(!ObdCommandPolicy.isAllowed(command))throw new SecurityException("Blocked non-read-only OBD command: "+command);return Elm327ResponseParser.normalize(transport.exchange(command,5000));} public void close(){transport.close();} public boolean isConnected(){return transport.isConnected();} }
