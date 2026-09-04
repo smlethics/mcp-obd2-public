@@ -1,0 +1,17 @@
+.gradle/
+.idea/
+.vscode/
+local.properties
+**/build/
+*.iml
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+keystore.properties
+secrets.properties
+credentials*.json
