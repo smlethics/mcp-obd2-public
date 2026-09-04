@@ -1,0 +1,2 @@
+package it.salvatoremichelelombardo.obd2reader;
+public final class PidReading { private final String pid,label,unit; private final double value; public PidReading(String pid,String label,double value,String unit){this.pid=pid;this.label=label;this.value=value;this.unit=unit;} public String getPid(){return pid;} public String getLabel(){return label;} public double getValue(){return value;} public String getUnit(){return unit;} public String toString(){return label+": "+String.format(java.util.Locale.ROOT,"%.2f",value)+" "+unit;} }
