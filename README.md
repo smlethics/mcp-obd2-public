@@ -18,6 +18,10 @@ The command layer is an allowlist. Mode 04 (clear DTC), Mode 08 actuator control
 JDK 17 + Android SDK 36 + Gradle 9.6: `gradle testDebugUnitTest assembleDebug`.
 APK: `app/build/outputs/apk/debug/app-debug.apk`.
 
+## Specifications
+
+See [`docs/SPECIFICATIONS.md`](docs/SPECIFICATIONS.md) for the public-safe project contract, safety boundaries and completion criteria.
+
 ## Public-source hygiene
 This repository is intentionally standalone. It contains no private dashboard integration, local machine paths, credentials, tokens or private infrastructure configuration. Local Android SDK configuration belongs in `local.properties` and must never be committed.
 
